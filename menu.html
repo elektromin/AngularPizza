@@ -1,0 +1,12 @@
+<h2>Menu</h2>
+<div ng-repeat="category in menu.categories()">
+    <h3>{{category}}</h3>
+    <ul class="">
+        <li ng-repeat="item in menu.byCategory(category)">
+            <b>{{item.name}}</b> {{item.price}}kr
+            <ul class="list-inline">
+                <li ng-repeat="topping in item.topping">{{topping}}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
