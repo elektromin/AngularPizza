@@ -6,3 +6,11 @@
         {{restaurant.address2}}
     </address>
 </div>
+<div ng-if="restaurants.closestRestaurant != null">
+<h2>Närmaste restaurang</h2>
+<h3>{{restaurants.closestRestaurant.name}}</h3>
+<address>
+    {{restaurants.closestRestaurant.address1}}<br/>
+    {{restaurants.closestRestaurant.address2}}
+</address>
+</div>
