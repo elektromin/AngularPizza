@@ -89,11 +89,6 @@ angular.module('angularPizza', ['ngRoute', 'ngGeolocation'])
 
         restaurants.distanceToRestaurant = function(myPosition, restaurant) {
             return distance(myPosition.coords.longitude, myPosition.coords.latitude, restaurant.longitude, restaurant.latitude);
-
-            var a = myPosition.coords.latitude - restaurant.latitude;
-            var b = myPosition.coords.longitude - restaurant.longitude;
-            var c = Math.sqrt(a * a + b * b);
-            return c;
         };
 
         /// code taken from http://stackoverflow.com/questions/13840516/how-to-find-my-distance-to-a-known-location-in-javascript
